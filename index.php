@@ -10,7 +10,7 @@
 <body>
     <div class="conteiner-fluid login">
          <p></p>
-     <img src="./img/instagram.png" class="figure-img img-fluid">
+     <img src="" class="figure-img img-fluid">
           
      <br>
      <input type="text" >
