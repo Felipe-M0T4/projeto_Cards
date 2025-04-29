@@ -8,7 +8,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="conteiner-fluid login" style=justify-content: display-flex;>
+    <div class="conteiner-fluid login" 
+        style="justify-content: display-flex;
+               align-itens^: center;">
          <p></p>
      <img src="./outros//imagens//Instagram_files/E7m8ZCMOFDS.png" class="figure-img img-fluid">
           
