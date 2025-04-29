@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" href="https://img.freepik.com/vetores-premium/icone-de-logotipo-de-vetor-do-instagram-logotipo-de-midia-social_901408-392.jpg?semt=ais_hybrid&w=740">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-     <h1>Instagram</h1>
+    <div class="conteiner-fluid login">
+         <p></p>
+     <img src="./img/instagram.png" class="figure-img img-fluid">
+          
+     <br>
      <input type="text" >
+     <br>
      <input type="text" >
+     <br>
      <button>esqueceu a senha?</button>
      <button>entrar</button>
+    </div>
 </body>
 </html>
-<style src="Login.js"></style>
-<script src="Login.js"></script>
+<style src="Login.css"></style>
