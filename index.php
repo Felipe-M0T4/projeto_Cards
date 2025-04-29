@@ -10,7 +10,7 @@
 <body>
     <div class="conteiner-fluid login" 
         style="justify-content: display-flex;
-               align-itens^: center;">
+               align-itens: center;">
          <p></p>
      <img src="./outros//imagens//Instagram_files/E7m8ZCMOFDS.png" class="figure-img img-fluid">
           
