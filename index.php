@@ -15,9 +15,9 @@
      <img src="./outros//imagens//Instagram_files/E7m8ZCMOFDS.png" class="figure-img img-fluid">
           
      <br>
-     <input type="text" >
+     <input type="email" placeholder="digite seu email:">
      <br>
-     <input type="text" >
+     <input type="passowrd" placeholder="digite sua senha:">
      <br>
      <button>esqueceu a senha?</button>
      <button>entrar</button>
