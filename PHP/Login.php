@@ -12,7 +12,7 @@ echo "Carregou a página!!!";
 <body>
      <h1>Instagram</h1>
 
-    <form action="/index.php">
+    <form action="./index.php">
      <input type="email" placeholder="email">
      <input type="password" placeholder="senha">
      <button>esqueceu a senha?</button>
