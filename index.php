@@ -48,5 +48,19 @@ style="text-align: center; justify-content: center;">
     <a href="">Uploads de contatos e não usuários</a>
     <a href="">Meta Verified</a>
 </div>
+    <div class="conteiner-fluid login" 
+        style="justify-content: ;
+               align-itens: center;">
+         <p></p>
+     <img src="./outros//imagens//Instagram_files/E7m8ZCMOFDS.png" class="figure-img img-fluid">
+          
+     <br>
+     <input type="email" placeholder="digite seu email:">
+     <br>
+     <input type="passowrd" placeholder="digite sua senha:">
+     <br>
+     <button>esqueceu a senha?</button>
+     <button>entrar</button>
+    </div>
 </body>
 </html>
