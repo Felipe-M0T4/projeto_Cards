@@ -63,6 +63,8 @@ INSERT INTO usuario VALUES ('id','Jamil','jamilferreira@gmail.com','22081976','1
         echo $erro;
     }
         ?>
+
+        
         <form action="./testeSQL.php" method="POST" class="d-flex flex-column gap-2">
             <label>SQL para executar</label>
             <textarea name="SQLQuery" id="SQLQuery"></textarea>

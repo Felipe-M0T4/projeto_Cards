@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://images.openai.com/thumbnails/22d32ad86aa5edb78c175b6d3eae03b0.jpeg" type="image/x-icon">
   <title>Login Instagram</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+
   <style>
     * {
       box-sizing: border-box;
@@ -22,6 +23,7 @@
       align-items: center;
       height: 100vh;
     }
+
     .instagram-logo {
       font-family: 'San Francisco';
       font-size: 48px;
@@ -144,43 +146,88 @@
     }
   </style>
 </head>
+
 <body>
 
-  <div class="login-container">
-    <img src="c:\xampp\htdocs\projeto_Cards\outros\imagens\Instagram_files\E7m8ZCMOFDS.png">
+  <?php
+  //echo var_dump($_POST);
 
-    <form>
-      <div class="input-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="seu@email.com" required>
-      </div>
+  $nomeservidor = "localhost";
+  $nomeusuario = "root";
+  $senha = "";
+  $bancodados = "felipe_instagram";
 
-      <div class="input-group">
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="••••••••" required>
-        <a href="#" class="forgot-password">Esqueceu a senha?</a>
-      </div>
+
+  $conexao = new mysqli($nomeservidor, $nomeusuario, $senha, $bancodados);
+  if ($conexao->connect_error) {
+    die("Conexão falhou: " . $conexao->connect_error);
+  }
+
+  $usuario = $_POST["email"];
+  $sql = "select * from usuario where EMAIL = $usuario and SENHA = $senha";
+  //echo $sql;
+  $senhaInput = $_POST["senha"];
+
+  $resposta = $conexao->query("select * from usuario where EMAIL = '$usuario' and SENHA = '$senhaInput'");
+
+  if ($resposta) {
+    if ($resposta->num_rows > 0) {
+      header("Location: ./Explorar.php");
+      while ($row = $resposta->fetch_assoc()) {
+        echo "ID: " . $row["ID"] . " - Nome: " . $row["NOME"] . "<br>";
+      }
+    } else {
+
+  ?>
+
+      <div class="login-container">
+        <img src="c:\xampp\htdocs\projeto_Cards\outros\imagens\Instagram_files\E7m8ZCMOFDS.png">
+
+        <form action="./Login.php" method="POST">
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input name="email" type="email" id="email" placeholder="seu@email.com" required>
+          </div>
+
+          <div class="input-group">
+            <label for="senha">Senha</label>
+            <input name="senha" type="password" id="senha" placeholder="••••••••" required>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+          </div>
+
+      <?php
+      echo '<p style="color:red">email ou senha incorretos</p>';
+    }
+    $resposta->free();
+  } else {
+    echo "Erro na pesquisa: " . $conexao->error;
+  }
+
+  $conexao->close();
+      ?>
 
       <button type="submit" class="btn-primary">Entrar</button>
-    </form>
+        </form>
 
-    <button class="btn-social btn-instagram">
-      <i class="fab fa-instagram">Entrar com Instagram</i>
-    </button>
+        <button class="btn-social btn-instagram">
+          <i class="fab fa-instagram">Entrar com Instagram</i>
+        </button>
 
-    <button class="btn-social btn-facebook">
-      <i class="fab fa-facebook-f">Entrar com Facebook</i> 
-    </button>
+        <button class="btn-social btn-facebook">
+          <i class="fab fa-facebook-f">Entrar com Facebook</i>
+        </button>
 
-    <div class="footer-text">
-      Não compartilhamos nada sem sua permissão.
-<body>
-    <div class="conteiner-fluid login">
+        <div class="footer-text">
+          Não compartilhamos nada sem sua permissão.
+
+          <body>
+            <div class="conteiner-fluid login">
 
 
-</body>
+          </body>
+
 </html>
 
 <script>
-    
+
 </script>
