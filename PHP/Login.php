@@ -177,7 +177,7 @@
 
   if ($resposta) {
     if ($resposta->num_rows > 0) {
-      header("Location: ./Explorar.php");
+      header(header: "Location: ./Explorar.php");
       while ($row = $resposta->fetch_assoc()) {
         echo "ID: " . $row["ID"] . " - Nome: " . $row["NOME"] . "<br>";
       }

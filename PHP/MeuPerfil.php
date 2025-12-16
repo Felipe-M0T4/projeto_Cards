@@ -185,6 +185,37 @@
           Criar Novo Post
         </h5>
 
+  <?php
+  //Criar conexão com o banco de dados
+  //Criando variáveis de texto
+
+  $nomeservidor = "localhost"; //qual o banco de dados está (utl)?
+  $nomeusuario = "root"; //qual o usuário do banco de dados?
+  $senha = ""; //qual a senha
+  $bancodados = "felipe_instagram"; //qual o nome do banco de dados?
+
+  // conectar ao banco
+  $conexao = new mysqli($nomeservidor, $nomeusuario, $senha, $bancodados);
+  // verifica a conexão
+  if ($conexao->connect_error) {
+    //para por aqui, não continua   
+    die("Conexão falhou: " . $conexao->connect_error);
+  }
+
+  //lendo o que o user digitou
+
+  if(!isset($_POST['descrição'])){
+    $descricao = $_POST['descricao'];
+
+  //construir query (consulta)
+  $sql = "INSERT INTO post (descricao) VALUES('$descricao')";
+
+  //executar a consulta
+  $resposta = $conexao -> query($sql);
+    die('Não recebeu post.');
+  }
+  ?>
+
         <button type="button" class="btn-clore" data-bs-dismiss="modal" arialabel="Fechar"></button>
      </div>
 
@@ -212,7 +243,7 @@
           </label>
 
           <textarea class="form-control" id="legendaPost" rows="4"
-          placeholder="Escreva uma legenda para o seu post..."></textarea>
+          placeholder="Escreva uma legenda para o seu post..." name="descricao"></textarea>
 
           <div class="form-text text-muted">Conte a história da sua foto! Use hashtags (#) para alcançar mais pessoas;</div>
         </div>
@@ -243,6 +274,7 @@
     
 
      <div class="modal-footer">
+      
       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
         <i class="bi bi-x-circle"></i>
         Cancelar
