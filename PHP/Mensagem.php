@@ -150,7 +150,7 @@
        
         <a href="./Login.php"><i class="bi bi-house"></i> Página Inicial</a>
         
-        <a href="./Explorar.php">Explorar</a>
+        <a href="./Explorar.php"><i class="bi bi-search">Explorar</i></a>
         
         <a href="./Mensagem.php"><i class="bi bi-chat"></i> Mensagens</a>
         
