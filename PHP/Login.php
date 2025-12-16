@@ -144,6 +144,11 @@
         padding: 30px 20px;
       }
     }
+
+    #img-title{
+      width: 60%;
+      height: 60%;
+    }
   </style>
 </head>
 
@@ -181,7 +186,7 @@
   ?>
 
       <div class="login-container">
-        <img src="c:\xampp\htdocs\projeto_Cards\outros\imagens\Instagram_files\E7m8ZCMOFDS.png">
+        <img id="img-title" src="imagens/instagram-titulo.png" alt="título cursivo do Instagram">
 
         <form action="./Login.php" method="POST">
           <div class="input-group">
